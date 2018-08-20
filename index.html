@@ -3,8 +3,35 @@
         <meta charset="utf-8">
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
         <link rel="stylesheet" href="/views/main_css/main.css">
+        <link rel="stylesheet" href="/views/namuneo/css/main.css">
+        <script src="/views/namuneo/css/main.js"></script>
+        <link   rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+                integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+                crossorigin="anonymous">
+        {{imp[1][5]|safe}}
+        {{imp[2][3]|safe}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+        <div id="top">
+            <div id="top_main">
+                <a href="/">{{imp[1][4]|safe}}</a>
+            </div>
+        </div>
+        <div id="main">
+            <h1>
+                {{imp[0]}}
+                {% if imp[3][0] != 0 %}
+                    <sub>{{imp[3][0]}}</sub>
+                {% endif %}
+            </h1>
+            {{data|safe}}
+        </div>
+        <div id="bottom">
+            <div id="bottom_main">
+                {{imp[1][1]|safe}}
+            </div>
+        </div>
     </body>
 </html>
