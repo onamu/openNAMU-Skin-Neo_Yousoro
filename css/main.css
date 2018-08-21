@@ -8,7 +8,7 @@ body {
 
 ul {
     padding: 0;
-    padding-left: 10px;
+    padding-left: 30px;
 }
 
 #top {
@@ -45,7 +45,7 @@ ul {
     margin-top: 20px;
 }
 
-@media (min-width: 768px) and (max-width: 1600px) {
+@media (min-width: 1024px) and (max-width: 1600px) {
     #main {
         border-left: 1px solid black;
         border-right: 1px solid black;
@@ -58,6 +58,10 @@ ul {
 
     #bottom_main {
         width: 70%;
+    }
+
+    .is_mobile {
+        display: none;
     }
 }
 
@@ -75,9 +79,13 @@ ul {
     #bottom_main {
         width: 55%;
     }
+
+    .is_mobile {
+        display: none;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     #main {
         width: 90%;
     }
@@ -88,6 +96,14 @@ ul {
 
     #bottom_main {
         width: 90%;
+    }
+
+    .not_mobile {
+        display: none;
+    }
+
+    #main_data {
+        padding-top: 50px;
     }
 }
 
@@ -119,4 +135,27 @@ h5 {
 h6 {
     border-bottom: 1px solid gainsboro;
     padding-bottom: 10px;
+}
+
+#tool_cel {
+    display: inline-block;
+}
+
+#main_top {
+    width: 100%;
+}
+
+#tool {
+    float: right;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#logo {
+    display: inline-block;
+}
+
+#top_tool {
+    float: right;
+    display: inline-block;
 }

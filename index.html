@@ -4,7 +4,7 @@
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
         <link rel="stylesheet" href="/views/main_css/main.css">
         <link rel="stylesheet" href="/views/namuneo/css/main.css">
-        <script src="/views/namuneo/css/main.js"></script>
+        <script src="/views/namuneo/js/main.js"></script>
         <link   rel="stylesheet"
                 href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
                 integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
@@ -16,17 +16,62 @@
     <body>
         <div id="top">
             <div id="top_main">
-                <a href="/">{{imp[1][4]|safe}}</a>
+                <div id="logo">
+                    <a href="/">{{imp[1][4]|safe}}</a>
+                </div>
+                <div id="top_tool">
+                    <div id="top_tool_cel">
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            {{'recent'|load_lang}}
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="search">
+                    
+                </div>
+                <div id="user">
+                    
+                </div>
             </div>
         </div>
         <div id="main">
-            <h1>
-                {{imp[0]}}
-                {% if imp[3][0] != 0 %}
-                    <sub>{{imp[3][0]}}</sub>
+            <div id="main_top">
+                {% if menu != 0 %}
+                    <div id="tool" class="not_mobile">
+                        {% for sub_d in menu %}
+                            <div id="tool_cel">
+                                <a class="menu-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                            </div>
+                            {% if menu[loop.index] %}
+                                |
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                 {% endif %}
-            </h1>
-            {{data|safe}}
+                <h1>
+                    {{imp[0]}}
+                    {% if imp[3][0] != 0 %}
+                        <sub>{{imp[3][0]}}</sub>
+                    {% endif %}
+                </h1>
+                {% if menu != 0 %}
+                    <div id="tool" class="is_mobile">
+                        {% for sub_d in menu %}
+                            <div id="tool_cel">
+                                <a class="menu-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                            </div>
+                            {% if menu[loop.index] %}
+                                |
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div id="main_data">
+                {{data|safe}}
+            </div>
         </div>
         <div id="bottom">
             <div id="bottom_main">
