@@ -39,6 +39,10 @@ td {
     border: 1px solid darkgrey;
 }
 
+li {
+    margin-left: 20px;
+}
+
 #top {
     width: 100%;
     border-bottom: 1px solid black;
