@@ -8,7 +8,35 @@ body {
 
 ul {
     padding: 0;
-    padding-left: 30px;
+    padding-left: 10px;
+}
+
+input {
+    padding: 5px;
+}
+
+select {
+    padding: 5px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid gainsboro;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+code {
+    background: mistyrose;
+}
+
+td {
+    border: 1px solid darkgrey;
 }
 
 #top {
@@ -16,9 +44,12 @@ ul {
     border-bottom: 1px solid black;
     background: bisque;
     padding: 10px;
+    padding-right: 0;
+    padding-left: 0;
     position: relative;
     top: 0;
     left: 0;
+    height: 20px;
 }
 
 #main {
@@ -43,6 +74,12 @@ ul {
 #bottom_main {
     margin: auto;
     margin-top: 20px;
+}
+
+#tool {
+    float: right;
+    border: 1px solid black;
+    padding: 10px;
 }
 
 @media (min-width: 1024px) and (max-width: 1600px) {
@@ -102,8 +139,10 @@ ul {
         display: none;
     }
 
-    #main_data {
-        padding-top: 50px;
+    #tool {
+        float: none;
+        width: 90%;
+        margin-bottom: 10px;
     }
 }
 
@@ -145,17 +184,37 @@ h6 {
     width: 100%;
 }
 
-#tool {
-    float: right;
-    border: 1px solid black;
-    padding: 10px;
-}
-
 #logo {
     display: inline-block;
 }
 
 #top_tool {
     float: right;
+    margin-top: -5px;
+}
+
+#save {
+    background: lightblue;
+}
+
+#preview {
+    background: aquamarine;
+}
+
+.cel_in_cel {
+    border: 1px solid black;
+    padding: 10px;
+    position: absolute;
+    background: white;
+    margin-top: 10px;
+    width: 100px;
+}
+
+#top_tool_cel {
     display: inline-block;
+}
+
+#search {
+    display: inline-block;
+    width: 200px;
 }

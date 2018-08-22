@@ -9,6 +9,7 @@
                 href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
                 integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
                 crossorigin="anonymous">
+        <link rel="shortcut icon" href="/views/main_css/file/favicon.ico">
         {{imp[1][5]|safe}}
         {{imp[2][3]|safe}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,20 +20,66 @@
                 <div id="logo">
                     <a href="/">{{imp[1][4]|safe}}</a>
                 </div>
-                <div id="top_tool">
+                <div id="top_tool" class="not_mobile">
                     <div id="top_tool_cel">
-                        <a href="javascript:void(0);">
-                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        <a href="javascript:void(0);" onclick="opening('recent_cel');">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                             {{'recent'|load_lang}}
                             <i class="fa fa-angle-down"></i>
                         </a>
+                        <div id="recent_cel" class="cel_in_cel" style="display: none;">
+                            <a href="/recent_changes">
+                                <i class="fa fa-sync-alt" aria-hidden="true"></i>
+                                {{'change'|load_lang}}
+                            </a>
+                            <hr>
+                            <a href="/recent_discuss">
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                                {{'discussion'|load_lang}}
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div id="search">
-                    
-                </div>
-                <div id="user">
-                    
+                    |
+                    <div id="top_tool_cel">
+                        <a href="javascript:void(0);" onclick="opening('other_cel');">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            {{'other'|load_lang}}
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <div id="other_cel" class="cel_in_cel" style="display: none;">
+                            <a href="/random">
+                                <i class="fa fa-random" aria-hidden="true"></i>
+                                {{'random'|load_lang}}
+                            </a>
+                            <hr>
+                            <a href="/other">
+                                <i class="fa fa-wrench" aria-hidden="true"></i>
+                                {{'tool'|load_lang}}
+                            </a>
+                            <hr>
+                            <a href="/skin_set">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                {{'skin'|load_lang}} {{'setting'|load_lang}}
+                            </a>
+                        </div>
+                    </div>
+                    |
+                    <div id="top_tool_cel">
+                        {% if imp[2][2] == 1 %}
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        {% elif imp[2][2] == 0 %}
+                            <i class="fa fa-user-times" aria-hidden="true"></i>
+                        {% else %}
+                            <i class="fa fa-user-secret" aria-hidden="true"></i>
+                        {% endif %}
+                        <a href="/user">
+                            {{imp[2][5]}}
+                        </a>
+                    </div>
+                    |
+                    <form method="post" action="/search" id="search" role="search">
+                        <input id="search_input" name="search" placeholder="검색" autocomplete="off" type="search">
+                    </form>
                 </div>
             </div>
         </div>
