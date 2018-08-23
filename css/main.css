@@ -222,3 +222,28 @@ h6 {
     display: inline-block;
     width: 200px;
 }
+
+#top_tool_mobile {
+    float: right;
+}
+
+#mobile_menu {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    border-left: 1px solid black;
+}
+
+#mobile_menu_main {
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#close_top {
+    float: right;
+    margin-right: 10px;
+}
