@@ -1,9 +1,9 @@
 body {
-    background: ghostwhite;
     max-width: 100%;
     word-break: break-all;
     word-wrap: break-word;
     margin: 0;
+    font-family: '나눔고딕', 'nanumgothic', "Nanum Gothic","KoPub Dotum","Malgun Gothic","맑은 고딕",sans-serif;
 }
 
 ul {
@@ -43,10 +43,14 @@ li {
     margin-left: 20px;
 }
 
+#background {
+    background: gainsboro;
+}
+
 #top {
     width: 100%;
-    border-bottom: 1px solid black;
-    background: bisque;
+    border-bottom: 2px solid #dcdcdc;
+    background: #fff;
     padding: 10px;
     padding-right: 0;
     padding-left: 0;
@@ -66,7 +70,7 @@ li {
 
 #bottom {
     width: 100%;
-    border-top: 1px solid black;
+    border-top: 2px solid #dcdcdc;
     background: white;
     padding-bottom: 20px;
 }
@@ -88,8 +92,8 @@ li {
 
 @media (min-width: 1024px) and (max-width: 1600px) {
     #main {
-        border-left: 1px solid black;
-        border-right: 1px solid black;
+        border-left: 2px solid #1b6d8d;
+        border-right: 2px solid #1b6d8d;
         width: 70%;
     }
 
@@ -108,8 +112,8 @@ li {
 
 @media (min-width: 1600px) {
     #main {
-        border-left: 1px solid black;
-        border-right: 1px solid black;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
         width: 55%;
     }
 
@@ -206,7 +210,7 @@ h6 {
 }
 
 .cel_in_cel {
-    border: 1px solid black;
+    border: 2px solid #dcdcdc;
     padding: 10px;
     position: absolute;
     background: white;
@@ -246,4 +250,24 @@ h6 {
 #close_top {
     float: right;
     margin-right: 10px;
+}
+
+#toc {
+    max-width: 300px;
+}
+
+#top a {
+    color: black;
+}
+
+a {
+    color: dodgerblue;
+}
+
+#syntax {
+    background: #F0F0F0;
+}
+
+pre {
+    border: 2px solid #d5d1d1;
 }
