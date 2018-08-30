@@ -26,17 +26,17 @@ hr {
 
 button {
     padding: 10px;
-    border: 1px solid black;
+    border: 2px solid gainsboro;
     background: white;
     cursor: pointer;
 }
 
 code {
-    background: mistyrose;
+    background: gainsboro;
 }
 
 td {
-    border: 1px solid darkgrey;
+    border: 1px solid gainsboro;
 }
 
 li {
@@ -49,7 +49,7 @@ li {
 
 #top {
     width: 100%;
-    border-bottom: 2px solid #dcdcdc;
+    border-bottom: 2px solid gainsboro;
     background: #fff;
     padding: 10px;
     padding-right: 0;
@@ -70,7 +70,7 @@ li {
 
 #bottom {
     width: 100%;
-    border-top: 2px solid #dcdcdc;
+    border-top: 2px solid gainsboro;
     background: white;
     padding-bottom: 20px;
 }
@@ -86,14 +86,14 @@ li {
 
 #tool {
     float: right;
-    border: 1px solid black;
+    border: 2px solid gainsboro;
     padding: 10px;
 }
 
 @media (min-width: 1024px) and (max-width: 1600px) {
     #main {
-        border-left: 2px solid #1b6d8d;
-        border-right: 2px solid #1b6d8d;
+        border-left: 2px solid gainsboro;
+        border-right: 2px solid gainsboro;
         width: 70%;
     }
 
@@ -201,16 +201,8 @@ h6 {
     margin-top: -5px;
 }
 
-#save {
-    background: lightblue;
-}
-
-#preview {
-    background: aquamarine;
-}
-
 .cel_in_cel {
-    border: 2px solid #dcdcdc;
+    border: 2px solid gainsboro;
     padding: 10px;
     position: absolute;
     background: white;
@@ -238,7 +230,7 @@ h6 {
     top: 0;
     right: 0;
     background: white;
-    border-left: 1px solid black;
+    border-left: 2px solid gainsboro;
 }
 
 #mobile_menu_main {
@@ -265,9 +257,21 @@ a {
 }
 
 #syntax {
-    background: #F0F0F0;
+    background: #f0f0f0;
+    padding: 5px;
 }
 
 pre {
-    border: 2px solid #d5d1d1;
+    border: 2px solid gainsboro;
+}
+
+textarea {
+    border: 2px solid gainsboro;
+    font-family: '나눔고딕', 'nanumgothic', "Nanum Gothic","KoPub Dotum","Malgun Gothic","맑은 고딕",sans-serif;
+    padding: 5px;
+}
+
+input {
+    border: 2px solid gainsboro;
+    font-family: '나눔고딕', 'nanumgothic', "Nanum Gothic","KoPub Dotum","Malgun Gothic","맑은 고딕",sans-serif;
 }
